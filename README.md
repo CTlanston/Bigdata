@@ -1,3 +1,4 @@
+# Video and link Tutorial 
 
 AWS EMR & CLI:
 https://www.youtube.com/watch?v=jylp2atrZjc
