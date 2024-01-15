@@ -1,4 +1,4 @@
-#Title: Yelp Data Warehouse & Sakila Movie Recommendation System
+# Title: Yelp Data Warehouse & Sakila Movie Recommendation System
 
 ## Project Overview
 This project is aimed at demonstrating advanced data management and analytical skills, primarily focused on two significant tasks: building a data warehouse for Yelp dataset for real-estate investment analysis and developing a movie recommendation system using the Sakila database. It offers practical insights into effective data warehousing, SQL query optimization, and NoSQL database scalability considerations.
