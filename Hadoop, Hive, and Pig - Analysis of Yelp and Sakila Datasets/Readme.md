@@ -1,54 +1,45 @@
-*Hadoop, Hive, and Pig - Analysis of Yelp and Sakila Datasets
+# Hadoop, Hive, and Pig: Yelp and Sakila Data Analysis Project README
 
-**Due Date:** November 17, 2023, 8:30 PM  
-**Points:** 30  
-**Submission:** One file upload, File Types: PDF  
-**Late Penalty:** 20% deduction for every 12-hour delay
+## Project Overview
+This project involves comprehensive data analysis using Hadoop, Hive, and Pig, focusing on Yelp and Sakila datasets. The objectives include data migration cost analysis, exploring various data loading methods into Hive, and performing comparative performance analysis between Hive and Pig. 
 
----
+## Data Migration Cost Analysis
 
-**Question 1: Data Migration Costs**
+### Objective
+Calculate and visualize the number of datanodes required for migrating 500TB of data to HDFS and estimate the cost associated with an EMR cluster over 20 quarters.
 
-- **Objective:** Calculate and plot the number of datanodes needed for migrating 500TB of data to HDFS with different data replication counts. Additionally, project the cost associated with an EMR cluster over the next 20 quarters, accounting for a 4% quarterly data increase.
-- **Skills Demonstrated:** Data migration planning, HDFS storage calculations, cost estimation using AWS cost calculator.
-- **Tasks:**
-    1. **Datanode Calculation**:
+### Tasks
+1. **Datanode Calculation**: Chart the number of datanodes needed for different replication counts. 
+2.
 
-      - Create a chart showing the number of datanodes required based on different data replication counts.
-      - For a replication count of 3, plot the change in datanode needs every quarter for the next 20 quarters, considering a 4% data increase each quarter.
-    2. **Cost Estimation**:
-      - Utilize the AWS cost calculator to estimate the cost of the EMR cluster, based on the number of datanodes calculated and an 80% utilization rate. Assume a linear increase in price over time.
+**Quarterly Datanode Needs**: Plot changes in datanode requirements every quarter for 20 quarters, assuming a 4% data increase per quarter.
+3. **Cost Estimation**: Use the AWS cost calculator to estimate EMR cluster costs based on datanode calculations and projected data growth.
 
-**Question 2: Data Migration into Hive**
+## Data Migration into Hive
 
-- **Objective:** Explore different methods of loading data into Hive and discuss their execution times and use cases.
-- **Skills Demonstrated:** Data loading in Hive, use of RDS, S3, Sqoop, and HiveQL.
-- **Tasks:**
-    1. **Data Loading**:
-      - Create three Hive tables (happy1, happy2, happy3).
-      - Load a happiness data CSV file into RDS MySQL (data1), S3 (data2), and then into Hive through various methods.
-    2. **Execution Time Analysis**:
-      - Compare the execution time for each method of data loading.
-    3. **Use Case Discussion**:
-      - Discuss the appropriate use cases for each data loading approach.
+### Objective
+Explore three different methods of loading happiness data into Hive and analyze their execution times and applicable use cases.
 
-**Question 3: Hive vs Pig**
+### Tasks
+1. **Create Hive Tables**: Set up three tables in Hive (happy1, happy2, happy3).
+2. **Data Loading**: Load the happiness data CSV file into RDS MySQL, S3, and then into Hive using various methods.
+3. **Execution Time Analysis**: Compare the time taken to load data into Hive across different methods.
+4. **Use Case Discussion**: Discuss the scenarios in which each data loading approach would be most suitable.
 
-- **Objective:** Compare Hive and Pig in terms of performance based on a specific use case and personal experimentation.
-- **Skills Demonstrated:** Comparative analysis of Hive and Pig, execution time benchmarking.
-- **Tasks:**
-    1. **Case Study Review**:
-      - Review the findings from the provided research paper and discuss use cases where Hive outperforms Pig.
-    2. **Performance Testing**:
-      - Load online-retail-dataset.csv into both Hive and Pig.
-      - Execute a query to find orders with UnitPrice > 5 and Quantity < 10 in both environments.
-      - Repeat the query 10 times and record execution times.
-    3. **Analysis**:
-      - Report summary statistics (mean, min, max, stddev) of the execution times.
-      - Discuss any observed variations and compare findings with the research paper.
+## Hive vs Pig Performance Analysis
+
+### Objective
+Conduct a comparative performance analysis between Hive and Pig using a specific use case and benchmarking exercises.
+
+### Tasks
+1. **Literature Review**: Study and discuss use cases where Hive outperforms Pig based on a research paper.
+2. **Performance Testing**: Load the 'online-retail-dataset.csv' into both Hive and Pig, executing and benchmarking a specific query in both environments.
+3. **Analysis and Reporting**: Present summary statistics of the execution times and discuss any variations and findings in comparison to the paper.
 
 ---
 
-**Collaboration Tips:**
-- Engage in group discussions to understand each team member's perspective and objectives. Collective efforts often lead to more comprehensive solutions.
-- Experiment with different EMR clusters within the group to see how variations affect execution times, especially in the Hive vs Pig comparison. This collaborative approach can provide a broader understanding of the tools' performance under different conditions.
+**Collaboration and Methodology**
+- Engage actively in group discussions to leverage diverse perspectives for a more thorough analysis.
+- Experiment with variations in the cluster setup to understand how different configurations impact performance in Hive and Pig.
+
+This project not only highlights technical skills in big data tools like Hadoop, Hive, and Pig but also demonstrates collaborative problem-solving and analytical capabilities.
