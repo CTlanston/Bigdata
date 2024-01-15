@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 host = "database-lab5.c3f4g2yxdyve.us-east-1.rds.amazonaws.com"
 port = "3306"
 user = "admin"
-password = "Ct123456"
+password = "123456"
 database = "happy"
 
 # Directory containing CSV files
