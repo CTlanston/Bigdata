@@ -29,4 +29,4 @@ improving customer experience and harnessing big data insights.
 ## Application
 - The project is designed for students and professionals aiming to sharpen their big data management and analytics skills. It provides hands-on experience with real datasets and scenarios, preparing individuals for data-driven challenges in the business world.
 
-all the question、answers and code are included in the pdf file
+## all the question、answers and code are included in the pdf file
