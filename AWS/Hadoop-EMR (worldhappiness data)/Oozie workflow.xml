@@ -1,1 +1,40 @@
+<workflow-app name="Lab 5 Workflow" xmlns="uri:oozie:workflow:0.5">
+    <start to="sqoop-71ff"/>
+
+    <kill name="Kill">
+        <message>Action failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+
+    <action name="sqoop-71ff">
+        <sqoop xmlns="uri:oozie:sqoop-action:0.2">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <command>import --connect jdbc:mysql://database-lab5.c3f4g2yxdyve.us-east-1.rds.amazonaws.com/happy --username admin --password Ct123456 --table happy2017 --target-dir /user/hadoop/lab5 --split-by id</command>
+        </sqoop>
+        <ok to="sqoop-7711"/>
+        <error to="Kill"/>
+    </action>
+
+    <action name="sqoop-7711">
+        <sqoop xmlns="uri:oozie:sqoop-action:0.2">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <command>import --connect jdbc:mysql://database-lab5.c3f4g2yxdyve.us-east-1.rds.amazonaws.com/happy --username admin --password Ct123456 --table happy2016 --target-dir /user/hadoop/lab5 --split-by id</command>
+        </sqoop>
+        <ok to="email-98f8"/>
+        <error to="Kill"/>
+    </action>
+    
+    <action name="email-98f8">
+        <email xmlns="uri:oozie:email-action:0.2">
+            <to>tche368@emory.edu</to>
+            <subject>Workflow Notification: Import Complete</subject>
+            <body>The Sqoop import actions have completed successfully.</body>
+            <content_type>text/plain</content_type>
+        </email>
+        <ok to="End"/>
+        <error to="Kill"/>
+    </action>
+    
+    <end name="End"/>
 
