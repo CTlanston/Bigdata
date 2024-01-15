@@ -39,6 +39,5 @@ Links to an external site.https://www.guru99.com/hbase-shell-general-commands.ht
  
 
 Pig and Hive:
-
-https://www.oracle.com/technetwork/topics/bigdata/articles/hive-and-pig-hol-1937050.pdfLinks to an external site.
+https://www.oracle.com/technetwork/topics/bigdata/articles/hive-and-pig-hol-1937050
  
